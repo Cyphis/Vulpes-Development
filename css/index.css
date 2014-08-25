@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #333333 url('../img/wall.jpg');
+	background-repeat: no-repeat;
+}
+
+#dock {
+	height: 100px;
+	width: 334px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#menu {
+	position: absolute;
+	display: none;
+	cursor: pointer;
+}
+
+#menu div.jqDock {
+	left: 0px;
+	!important;
+}
+
+#menu div.jqDockWrap {
+	margin: 0 auto;
+}
+
+#menu div.jqDocked {
+	cursor: pointer;
+	margin: 0 auto;
+	position: relative;
+}
+
+#welcome {
+	text-align: center;
+}
+
+.ui-dialog-content {
+	font-size: 14px;
+}
+
+.ui-dialog-content img {
+	height: 85px;
+	width: auto;
+	padding-right: 10px;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Vulpes Development | Thomas Ramage</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/contact.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.terminal.css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.jqdock.js"></script>
+	<script type="text/javascript" src="js/jquery.terminal.js"></script>
+    <script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+	<script type="text/javascript" src="js/getip.js"></script>
+</head>
+
+<body>
+	<div id="welcome">
+		Welcome to Vulpes Development!
+		<br />This is a website by <a href="javascript:void(null)" id="about_link">Thomas Ramage</a>.
+		<br />There's a hidden dock at the top of the page,
+		<br />you may have seen it.
+		<br />Feel free to click the icons and look around!
+	</div>
+	<div id="terminal">
+		<div id="js_term">
+		</div>
+	</div>
+	<div id="contact">
+		<form id="msg" method="post" action="mailer.php" align="center">
+			<div class="field">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+                <br />
+			</div>
+
+			<div class="field">
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+                <br />
+			</div>
+
+			<div class="field">
+				<label for="message">Message:</label>
+				<textarea id="message" name="message" required></textarea>
+			</div>
+
+			<div class="field">
+				<button type="submit">Send</button>
+			</div>
+		</form>
+        <div id="form-messages">
+        </div>
+	</div>
+	<div id="editor">
+    	<form>
+    	<textarea class="mce">
+        Sample text.
+        </textarea>
+        </form>
+	</div>
+	<div id="manager">
+		This is file manager window
+	</div>
+	<div id="settings">
+		This is settings window
+	</div>
+	<div id="about">
+		<img src="img/portrait.png" align="left" padding-right="10px" r/>Hi there! My name is Thomas. I love working with computers, and tinkering to find out how they work. I enjoy making software, but I haven't yet found my niche so I'm learning a bit of everything. I'm an avid Linux user of about 9 years, and have (mediocre) experience with HTML, CSS, JavaScript, PHP, Python, and Java.
+	</div>
+	<div id="dock">
+		<div id="menu">
+
+			<img draggable="false" id="terminal_icon" src="img/terminal.png" title="Terminal Emulator" alt="" />
+
+			<img src="img/contact.png" id="contact_icon" draggable="false" title="Mail Client" alt="" />
+
+			<img src="img/edit.png" id="edit_icon" draggable="false" title="Text Editor" alt="" />
+
+			<img src="img/folder.png" id="folder_icon" draggable="false" title="File Manager" alt="" />
+
+			<img src="img/settings.png" id="settings_icon" draggable="false" title="Control Panel" alt="" />
+
+			<img src="img/about.png" id="info_icon" draggable="false" title="Bio" alt="" />
+
+		</div>
+	</div>
+</body>
+
+</html>
