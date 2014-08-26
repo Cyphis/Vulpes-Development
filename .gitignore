@@ -215,4 +215,5 @@ pip-log.txt
 .mr.developer.cfg
 
 #Dreamweaver
-dwsync.xml\nThumbs.db
+dwsync.xml
+Thumbs.db
