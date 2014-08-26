@@ -73,7 +73,6 @@ jQuery(function($, undefined) {
 		}
 		
 		else if (command == "cat") {
-			alert('uhh');
 			$.when($.get("php/read.php")).done(function(text) {
 				term.echo(text);
 			});
