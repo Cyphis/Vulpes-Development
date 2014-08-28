@@ -1,6 +1,6 @@
 /* CREDITS */
 Wallpaper by zomx@deviantart
 Icons by kyo-tux@deviantart
-jqDock Wizzud
+jqDock by Wizzud
 TinyMCE by Moxiecode Systems AB
 jQuery by The jQuery Foundation

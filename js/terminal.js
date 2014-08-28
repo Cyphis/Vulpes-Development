@@ -52,6 +52,9 @@ jQuery(function($, undefined) {
 				else if (command.slice(5, command.length) == "ls") {
 					term.echo("Usage: ls prints all files and directories in your current working directory.");
 				}
+				else if (command.slice(5, command.length) == "pwd") {
+					term.echo("Usage: pwd prints current working directory.");
+				}
 				else {
 					term.echo("Unknown command: '" + command.slice(5, command.length) + "'.\nEnter 'help' for a list of usable commands.");
 				}
@@ -67,9 +70,13 @@ jQuery(function($, undefined) {
 		
 		/* ip */
 		else if (command == "ip") {
-				$.get("php/getip.php", function(ip) {
-					term.echo(ip);
-				});
+			$.get("php/getip.php", function(ip) {
+				term.echo(ip);
+			});
+		}
+		
+		else if (command == "pwd") {
+			term.echo("/home/guest");
 		}
 		
 		else if (command.substr(0,3) == "cat") {
@@ -228,4 +235,3 @@ $(document).ready(function() {
 		return false;
 	});
 });
-
