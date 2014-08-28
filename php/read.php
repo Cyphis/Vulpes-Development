@@ -1,12 +1,12 @@
 <?PHP
-
-$handle = fopen("../guest/credits.txt", "r");
-
-while (!feof($handle)) {
-	$line = fgets($handle);
+$cat = $_REQUEST['cat'];
+if (file_exists("../guest/" . $cat)) {
+	$file = new SPLFileObject("../guest/" . $cat);
+	foreach($file as $line) {
 	print $line;
+	}
 }
-
-fclose($handle);
-
+else {
+	print "File not found: " . "'" . $cat . "'";
+}
 ?>
