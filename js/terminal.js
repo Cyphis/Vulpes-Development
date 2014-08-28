@@ -1,14 +1,13 @@
-/* Welcome message */
 $(function() {
+
+	/* Welcome message */
 	$("#welcome").dialog({
 		autoOpen: true,
 		modal: false,
 		width: "350px",
 	});
-});
-
-/* Terminal window */
-$(function() {
+	
+	/* Terminal window */
 	$("#terminal").dialog({
 		autoOpen: false,
 		modal: false,
@@ -16,6 +15,7 @@ $(function() {
 		height: 500,
 		width: 750
 	});
+
 });
 
 jQuery(function($, undefined) {
@@ -29,9 +29,9 @@ jQuery(function($, undefined) {
 			term.echo("Usage: echo requires arguments");
 		}
 		else if (command.substr(0, 4) == "echo" && command.charAt(4) == " ") {
-			sliced = command.slice(5, command.length);
-			dquote = sliced.replace(/"/g, "");
-			squote = dquote.replace(/'/g, "");
+			var sliced = command.slice(5, command.length);
+			var dquote = sliced.replace(/"/g, "");
+			var squote = dquote.replace(/'/g, "");
 			term.echo(squote);
 		}
 		/* help */
@@ -80,7 +80,7 @@ jQuery(function($, undefined) {
 		}
 		
 		else if (command.substr(0,3) == "cat") {
-			file = command.slice(4, command.length);
+			var file = command.slice(4, command.length);
 			$.post("/php/read.php",
 			{
 				cat: file
@@ -131,27 +131,25 @@ jQuery(function($, undefined) {
 	});
 });
 
-/* Mail window */
+/* DOM Loaded */
 $(function() {
+	
+	/* Mail window */
 	$("#contact").dialog({
 		autoOpen: false,
 		modal: false,
 		width: "400px"
 	});
-});
-
-/* Text editor window */
-$(function() {
+	
+	/* Text editor window */
 	$("#editor").dialog({
 		autoOpen: false,
 		modal: false,
 		resizable: false,
 		width: "750px",
 	});
-});
-
-/* File manager window */
-$(function() {
+	
+	/* File manager window */
 	$("#manager").dialog({
 		autoOpen: false,
 		modal: false,
@@ -161,10 +159,8 @@ $(function() {
 			}
 		}
 	});
-});
-
-/* Settings window */
-$(function() {
+	
+	/* Settings window */
 	$("#settings").dialog({
 		autoOpen: false,
 		modal: false,
@@ -174,64 +170,49 @@ $(function() {
 			}
 		}
 	});
-});
-
-/* Bio window */
-$(function() {
+	
+	/* Bio window */
 	$("#about").dialog({
 		autoOpen: false,
 		modal: false,
 	});
-});
-
-/* ##### Click funcions ##### */
-
-/* Terminal Window */
-$(document).ready(function() {
+	
+	/* ##### Click funcions ##### */
+	
+	/* Terminal Window */
 	$("#terminal_icon").on("click", function() {
 		$("#terminal").dialog("open");
 	});
-});
-
-/* Mail Window */
-$(document).ready(function() {
+	
+	/* Mail Window */
 	$("#contact_icon").on("click", function() {
 		$("#contact").dialog("open");
 	});
-});
-
-/* Text Edit Window */
-$(document).ready(function() {
+	
+	/* Text Edit Window */
 	$("#edit_icon").on("click", function() {
 		$("#editor").dialog("open");
 	});
-});
-
-/* File Manager */
-$(document).ready(function() {
+	
+	/* File Manager */
 	$("#folder_icon").on("click", function() {
 		$("#manager").dialog("open");
 	});
-});
-
-/* Settings Window */
-$(document).ready(function() {
+	
+	/* Settings Window */
 	$("#settings_icon").on("click", function() {
 		$("#settings").dialog("open");
 	});
-});
-
-/* Bio */
-$(document).ready(function() {
+	
+	/* Bio */
 	$("#info_icon").on("click", function() {
 		$("#about").dialog("open");
 	});
-});
-
-/* This one is for the link on the welcome window */
-$(document).ready(function() {
+	
+	/* This one is for the link on the welcome window */
 	$("#about_link").on("click", function() {
 		$("#about").dialog("open");
 		return false;
 	});
+	
 });
