@@ -29,7 +29,7 @@ jQuery(function($, undefined) {
 			term.echo("Usage: echo requires arguments");
 		}
 		else if (command.substr(0, 4) == "echo" && command.charAt(4) == " ") {
-			sliced = command.slice(5, command.length);
+			var sliced = command.slice(5, command.length);
 			dquote = sliced.replace(/"/g, "");
 			squote = dquote.replace(/'/g, "");
 			term.echo(squote);
@@ -72,15 +72,9 @@ jQuery(function($, undefined) {
 				});
 		}
 		
-		else if (command.substr(0,3) == "cat") {
-			file = command.slice(4, command.length);
-			$.post("/php/read.php",
-			{
-				cat: file
-			},
-			function(data, textStatus)
-			{
-				term.echo(data);
+		else if (command == "cat") {
+			$.when($.get("php/read.php")).done(function(text) {
+				term.echo(text);
 			});
 		}
 		else if (command == "ip ") {
